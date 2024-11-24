@@ -1,7 +1,8 @@
 import * as cdk from 'aws-cdk-lib';
-import { LambdaIntegration, RestApi } from 'aws-cdk-lib/aws-apigateway';
+import { EndpointType, LambdaIntegration, RestApi } from 'aws-cdk-lib/aws-apigateway';
 import { Runtime } from 'aws-cdk-lib/aws-lambda';
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
+import {CorsOptions,Cors } from 'aws-cdk-lib/aws-apigateway';
 import { Lambda } from 'aws-cdk-lib/aws-ses-actions';
 import { Construct } from 'constructs';
  
@@ -18,6 +19,22 @@ export class RegularExamStack extends cdk.Stack {
         handler: "handler",
         entry: `${__dirname}/../src/imageUploadFunction.ts`
     });
+  
+    
+     const restApiGateway = new RestApi(this, "ExamRestApi",
+       {endpointTypes: [EndpointType.REGIONAL],
+         
+        defaultCorsPreflightOptions: {
+          allowOrigins: Cors.ALL_ORIGINS,
+          allowMethods: Cors.ALL_METHODS
+         }
+        }
+      );
+
+
+    const imageUploadResource = restApiGateway.root.addResource("imageUpload");
+    imageUploadResource.addMethod("POST", new LambdaIntegration(imageUploadFunction,
+       {proxy: true}));
  
   }
 }
