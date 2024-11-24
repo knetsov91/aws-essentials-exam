@@ -6,6 +6,7 @@ import {CorsOptions,Cors } from 'aws-cdk-lib/aws-apigateway';
 import { Lambda } from 'aws-cdk-lib/aws-ses-actions';
 import { Construct } from 'constructs';
 import { Topic } from 'aws-cdk-lib/aws-sns';
+import { AttributeType, BillingMode, StreamViewType, Table } from 'aws-cdk-lib/aws-dynamodb';
  
 
 export class RegularExamStack extends cdk.Stack {
@@ -37,8 +38,18 @@ export class RegularExamStack extends cdk.Stack {
     imageUploadResource.addMethod("POST", new LambdaIntegration(imageUploadFunction,
        {proxy: true}));
  
-       const successTopic = new Topic(this, 'SuccessTopic', {
-        topicName: "SuccessTopic"
-      }); 
+    const successTopic = new Topic(this, 'SuccessTopic', {
+      topicName: "SuccessTopic"
+    });
+    
+    
+    const metadataTable = new Table(this, 'ImagesMetadataTable', {
+      partitionKey: {
+        name: "id",
+        type: AttributeType.STRING
+      },
+      billingMode: BillingMode.PAY_PER_REQUEST
+
+    });
   }
 }
