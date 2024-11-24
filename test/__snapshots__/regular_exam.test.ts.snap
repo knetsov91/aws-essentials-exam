@@ -14,7 +14,7 @@ RegularExamStack {
   "_suppressTemplateIndentation": false,
   "_terminationProtection": false,
   "_versionReportingEnabled": undefined,
-  "account": "\${Token[AWS.AccountId.3]}",
+  "account": "\${Token[AWS.AccountId.7]}",
   "artifactId": "ApplicationStack",
   "environment": "aws://unknown-account/unknown-region",
   "node": Node {
@@ -35,17 +35,17 @@ RegularExamStack {
         "canCreatePermissions": true,
         "currentVersionOptions": undefined,
         "env": {
-          "account": "\${Token[AWS.AccountId.3]}",
-          "region": "\${Token[AWS.Region.7]}",
+          "account": "\${Token[AWS.AccountId.7]}",
+          "region": "\${Token[AWS.Region.11]}",
         },
         "environment": {},
-        "functionArn": "\${Token[TOKEN.34]}",
-        "functionName": "\${Token[TOKEN.33]}",
+        "functionArn": "\${Token[TOKEN.38]}",
+        "functionName": "\${Token[TOKEN.37]}",
         "grantPrincipal": Role {
           "_allowCrossEnvironment": false,
           "_didSplit": false,
           "_physicalName": undefined,
-          "_roleId": "\${Token[TOKEN.18]}",
+          "_roleId": "\${Token[TOKEN.22]}",
           "assumeRoleAction": "sts:AssumeRole",
           "assumeRolePolicy": {
             "Statement": [
@@ -53,7 +53,7 @@ RegularExamStack {
                 "Action": "sts:AssumeRole",
                 "Effect": "Allow",
                 "Principal": {
-                  "Service": "\${Token[lambda.amazonaws.com.13]}",
+                  "Service": "\${Token[lambda.amazonaws.com.17]}",
                 },
               },
             ],
@@ -64,14 +64,14 @@ RegularExamStack {
           },
           "dependables": Map {},
           "env": {
-            "account": "\${Token[AWS.AccountId.3]}",
-            "region": "\${Token[AWS.Region.7]}",
+            "account": "\${Token[AWS.AccountId.7]}",
+            "region": "\${Token[AWS.Region.11]}",
           },
           "grantPrincipal": [Circular],
           "inlinePolicies": {},
           "managedPolicies": [
             AwsManagedPolicy {
-              "managedPolicyArn": "arn:\${Token[AWS.Partition.6]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              "managedPolicyArn": "arn:\${Token[AWS.Partition.10]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
             },
           ],
           "node": Node {
@@ -85,8 +85,8 @@ RegularExamStack {
                 },
                 "defaultPolicyName": undefined,
                 "env": {
-                  "account": "\${Token[AWS.AccountId.3]}",
-                  "region": "\${Token[AWS.Region.7]}",
+                  "account": "\${Token[AWS.AccountId.7]}",
+                  "region": "\${Token[AWS.Region.11]}",
                 },
                 "grantPrincipal": [Circular],
                 "node": Node {
@@ -100,17 +100,17 @@ RegularExamStack {
                   "id": "ImportServiceRole",
                   "scope": [Circular],
                 },
-                "physicalName": "\${Token[TOKEN.14]}",
+                "physicalName": "\${Token[TOKEN.18]}",
                 "policyFragment": PrincipalPolicyFragment {
                   "conditions": {},
                   "principalJson": {
                     "AWS": [
-                      "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                      "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                     ],
                   },
                 },
-                "principalAccount": "\${Token[AWS.AccountId.3]}",
-                "roleArn": "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                "principalAccount": "\${Token[AWS.AccountId.7]}",
+                "roleArn": "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                 "roleName": "ServiceRole",
                 "stack": [Circular],
                 Symbol(@aws-cdk/core.DependableTrait): {
@@ -127,7 +127,7 @@ RegularExamStack {
                         "Action": "sts:AssumeRole",
                         "Effect": "Allow",
                         "Principal": {
-                          "Service": "\${Token[lambda.amazonaws.com.13]}",
+                          "Service": "\${Token[lambda.amazonaws.com.17]}",
                         },
                       },
                     ],
@@ -135,13 +135,13 @@ RegularExamStack {
                   },
                   "description": undefined,
                   "managedPolicyArns": [
-                    "#{Token[TOKEN.15]}",
+                    "#{Token[TOKEN.19]}",
                   ],
                   "maxSessionDuration": undefined,
                   "path": undefined,
                   "permissionsBoundary": undefined,
                   "policies": undefined,
-                  "roleName": "\${Token[TOKEN.12]}",
+                  "roleName": "\${Token[TOKEN.16]}",
                 },
                 "assumeRolePolicyDocument": {
                   "Statement": [
@@ -149,21 +149,21 @@ RegularExamStack {
                       "Action": "sts:AssumeRole",
                       "Effect": "Allow",
                       "Principal": {
-                        "Service": "\${Token[lambda.amazonaws.com.13]}",
+                        "Service": "\${Token[lambda.amazonaws.com.17]}",
                       },
                     },
                   ],
                   "Version": "2012-10-17",
                 },
-                "attrArn": "\${Token[TOKEN.17]}",
-                "attrRoleId": "\${Token[TOKEN.18]}",
+                "attrArn": "\${Token[TOKEN.21]}",
+                "attrRoleId": "\${Token[TOKEN.22]}",
                 "cfnOptions": {},
                 "cfnResourceType": "AWS::IAM::Role",
                 "dependsOn": Set {},
                 "description": undefined,
-                "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                 "managedPolicyArns": [
-                  "#{Token[TOKEN.15]}",
+                  "#{Token[TOKEN.19]}",
                 ],
                 "maxSessionDuration": undefined,
                 "node": Node {
@@ -173,7 +173,7 @@ RegularExamStack {
                   "_locked": false,
                   "_metadata": [
                     {
-                      "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                      "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                       "trace": undefined,
                       "type": "aws:cdk:logicalId",
                     },
@@ -187,7 +187,7 @@ RegularExamStack {
                 "permissionsBoundary": undefined,
                 "policies": undefined,
                 "rawOverrides": {},
-                "roleName": "\${Token[TOKEN.12]}",
+                "roleName": "\${Token[TOKEN.16]}",
                 "stack": [Circular],
                 "tags": TagManager {
                   "didHaveInitialTags": false,
@@ -221,18 +221,18 @@ RegularExamStack {
             "scope": [Circular],
           },
           "permissionsBoundary": undefined,
-          "physicalName": "\${Token[TOKEN.12]}",
+          "physicalName": "\${Token[TOKEN.16]}",
           "policyFragment": PrincipalPolicyFragment {
             "conditions": {},
             "principalJson": {
               "AWS": [
-                "\${Token[TOKEN.19]}",
+                "\${Token[TOKEN.23]}",
               ],
             },
           },
-          "principalAccount": "\${Token[AWS.AccountId.3]}",
-          "roleArn": "\${Token[TOKEN.19]}",
-          "roleName": "\${Token[TOKEN.21]}",
+          "principalAccount": "\${Token[AWS.AccountId.7]}",
+          "roleArn": "\${Token[TOKEN.23]}",
+          "roleName": "\${Token[TOKEN.25]}",
           "stack": [Circular],
           Symbol(@aws-cdk/core.DependableTrait): {
             "dependencyRoots": [
@@ -250,19 +250,19 @@ RegularExamStack {
                 "_allowCrossEnvironment": false,
                 "_physicalName": undefined,
                 "autoCreatePolicy": false,
-                "bucketArn": "arn:\${Token[AWS.Partition.6]}:s3:::\${Token[TOKEN.23]}",
-                "bucketDomainName": "\${Token[TOKEN.23]}.s3.\${Token[AWS.URLSuffix.4]}",
-                "bucketDualStackDomainName": "\${Token[TOKEN.23]}.s3.dualstack.\${Token[AWS.Region.7]}.\${Token[AWS.URLSuffix.4]}",
-                "bucketName": "\${Token[TOKEN.23]}",
-                "bucketRegionalDomainName": "\${Token[TOKEN.23]}.s3.\${Token[AWS.Region.7]}.\${Token[AWS.URLSuffix.4]}",
-                "bucketWebsiteDomainName": "\${Token[TOKEN.23]}.\${Token[TOKEN.25]}",
+                "bucketArn": "arn:\${Token[AWS.Partition.10]}:s3:::\${Token[TOKEN.27]}",
+                "bucketDomainName": "\${Token[TOKEN.27]}.s3.\${Token[AWS.URLSuffix.8]}",
+                "bucketDualStackDomainName": "\${Token[TOKEN.27]}.s3.dualstack.\${Token[AWS.Region.11]}.\${Token[AWS.URLSuffix.8]}",
+                "bucketName": "\${Token[TOKEN.27]}",
+                "bucketRegionalDomainName": "\${Token[TOKEN.27]}.s3.\${Token[AWS.Region.11]}.\${Token[AWS.URLSuffix.8]}",
+                "bucketWebsiteDomainName": "\${Token[TOKEN.27]}.\${Token[TOKEN.29]}",
                 "bucketWebsiteNewUrlFormat": false,
-                "bucketWebsiteUrl": "http://\${Token[TOKEN.23]}.\${Token[TOKEN.25]}",
+                "bucketWebsiteUrl": "http://\${Token[TOKEN.27]}.\${Token[TOKEN.29]}",
                 "disallowPublicAccess": false,
                 "encryptionKey": undefined,
                 "env": {
-                  "account": "\${Token[AWS.AccountId.3]}",
-                  "region": "\${Token[AWS.Region.7]}",
+                  "account": "\${Token[AWS.AccountId.7]}",
+                  "region": "\${Token[AWS.Region.11]}",
                 },
                 "isWebsite": false,
                 "node": Node {
@@ -281,7 +281,7 @@ RegularExamStack {
                   "scope": [Circular],
                 },
                 "notificationsHandlerRole": undefined,
-                "physicalName": "\${Token[TOKEN.26]}",
+                "physicalName": "\${Token[TOKEN.30]}",
                 "policy": undefined,
                 "stack": [Circular],
                 Symbol(@aws-cdk/core.DependableTrait): {
@@ -290,7 +290,7 @@ RegularExamStack {
                   ],
                 },
               },
-              "httpUrl": "\${Token[TOKEN.22]}",
+              "httpUrl": "\${Token[TOKEN.26]}",
               "isBundled": true,
               "isFile": false,
               "isZipArchive": true,
@@ -300,19 +300,19 @@ RegularExamStack {
                     "_allowCrossEnvironment": false,
                     "_physicalName": undefined,
                     "autoCreatePolicy": false,
-                    "bucketArn": "arn:\${Token[AWS.Partition.6]}:s3:::\${Token[TOKEN.23]}",
-                    "bucketDomainName": "\${Token[TOKEN.23]}.s3.\${Token[AWS.URLSuffix.4]}",
-                    "bucketDualStackDomainName": "\${Token[TOKEN.23]}.s3.dualstack.\${Token[AWS.Region.7]}.\${Token[AWS.URLSuffix.4]}",
-                    "bucketName": "\${Token[TOKEN.23]}",
-                    "bucketRegionalDomainName": "\${Token[TOKEN.23]}.s3.\${Token[AWS.Region.7]}.\${Token[AWS.URLSuffix.4]}",
-                    "bucketWebsiteDomainName": "\${Token[TOKEN.23]}.\${Token[TOKEN.25]}",
+                    "bucketArn": "arn:\${Token[AWS.Partition.10]}:s3:::\${Token[TOKEN.27]}",
+                    "bucketDomainName": "\${Token[TOKEN.27]}.s3.\${Token[AWS.URLSuffix.8]}",
+                    "bucketDualStackDomainName": "\${Token[TOKEN.27]}.s3.dualstack.\${Token[AWS.Region.11]}.\${Token[AWS.URLSuffix.8]}",
+                    "bucketName": "\${Token[TOKEN.27]}",
+                    "bucketRegionalDomainName": "\${Token[TOKEN.27]}.s3.\${Token[AWS.Region.11]}.\${Token[AWS.URLSuffix.8]}",
+                    "bucketWebsiteDomainName": "\${Token[TOKEN.27]}.\${Token[TOKEN.29]}",
                     "bucketWebsiteNewUrlFormat": false,
-                    "bucketWebsiteUrl": "http://\${Token[TOKEN.23]}.\${Token[TOKEN.25]}",
+                    "bucketWebsiteUrl": "http://\${Token[TOKEN.27]}.\${Token[TOKEN.29]}",
                     "disallowPublicAccess": false,
                     "encryptionKey": undefined,
                     "env": {
-                      "account": "\${Token[AWS.AccountId.3]}",
-                      "region": "\${Token[AWS.Region.7]}",
+                      "account": "\${Token[AWS.AccountId.7]}",
+                      "region": "\${Token[AWS.Region.11]}",
                     },
                     "isWebsite": false,
                     "node": Node {
@@ -331,7 +331,7 @@ RegularExamStack {
                       "scope": [Circular],
                     },
                     "notificationsHandlerRole": undefined,
-                    "physicalName": "\${Token[TOKEN.26]}",
+                    "physicalName": "\${Token[TOKEN.30]}",
                     "policy": undefined,
                     "stack": [Circular],
                     Symbol(@aws-cdk/core.DependableTrait): {
@@ -341,10 +341,10 @@ RegularExamStack {
                     },
                   },
                   "Stage": AssetStaging {
-                    "absoluteStagedPath": "/tmp/cdk.out2eHUm5/asset.bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
+                    "absoluteStagedPath": "/tmp/cdk.outdmAD4U/asset.bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
                     "assetHash": "bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
-                    "assetOutdir": "/tmp/cdk.out2eHUm5",
-                    "cacheKey": "e3621aacc9290d3aca954846348f7a05161c3e2b2d3a61db070185f1ece88f20",
+                    "assetOutdir": "/tmp/cdk.outdmAD4U",
+                    "cacheKey": "d2ba75308608f5a80c4ce2d53d5a0551ba30e157e20641a8f665319255f3e856",
                     "customSourceFingerprint": undefined,
                     "fingerprintOptions": {
                       "assetHash": undefined,
@@ -450,7 +450,7 @@ RegularExamStack {
                       "size": 4096,
                       "uid": 1000,
                     },
-                    "stagedPath": "/tmp/cdk.out2eHUm5/asset.bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
+                    "stagedPath": "/tmp/cdk.outdmAD4U/asset.bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
                     Symbol(@aws-cdk/core.DependableTrait): {
                       "dependencyRoots": [
                         [Circular],
@@ -467,10 +467,10 @@ RegularExamStack {
                 "id": "Code",
                 "scope": [Circular],
               },
-              "s3BucketName": "\${Token[TOKEN.23]}",
+              "s3BucketName": "\${Token[TOKEN.27]}",
               "s3ObjectKey": "bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d.zip",
-              "s3ObjectUrl": "\${Token[TOKEN.24]}",
-              "s3Url": "\${Token[TOKEN.22]}",
+              "s3ObjectUrl": "\${Token[TOKEN.28]}",
+              "s3Url": "\${Token[TOKEN.26]}",
               "sourceHash": "bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
               Symbol(@aws-cdk/core.DependableTrait): {
                 "dependencyRoots": [
@@ -483,7 +483,7 @@ RegularExamStack {
                 "architectures": undefined,
                 "code": {
                   "imageUri": undefined,
-                  "s3Bucket": "\${Token[TOKEN.23]}",
+                  "s3Bucket": "\${Token[TOKEN.27]}",
                   "s3Key": "bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d.zip",
                   "s3ObjectVersion": undefined,
                   "sourceKmsKeyArn": undefined,
@@ -495,19 +495,19 @@ RegularExamStack {
                 "environment": "<unresolved-lazy>",
                 "ephemeralStorage": undefined,
                 "fileSystemConfigs": undefined,
-                "functionName": "\${Token[TOKEN.11]}",
+                "functionName": "\${Token[TOKEN.15]}",
                 "handler": "index.handler",
                 "imageConfig": undefined,
                 "kmsKeyArn": undefined,
                 "layers": [
-                  "#{Token[TOKEN.27]}",
+                  "#{Token[TOKEN.31]}",
                 ],
                 "loggingConfig": undefined,
                 "memorySize": undefined,
                 "packageType": undefined,
                 "recursiveLoop": undefined,
                 "reservedConcurrentExecutions": undefined,
-                "role": "\${Token[TOKEN.19]}",
+                "role": "\${Token[TOKEN.23]}",
                 "runtime": "nodejs20.x",
                 "runtimeManagementConfig": undefined,
                 "snapStart": undefined,
@@ -515,15 +515,15 @@ RegularExamStack {
                 "vpcConfig": undefined,
               },
               "architectures": undefined,
-              "attrArn": "\${Token[TOKEN.29]}",
+              "attrArn": "\${Token[TOKEN.33]}",
               "attrSnapStartResponse": "<unresolved-token>",
-              "attrSnapStartResponseApplyOn": "\${Token[TOKEN.30]}",
-              "attrSnapStartResponseOptimizationStatus": "\${Token[TOKEN.31]}",
+              "attrSnapStartResponseApplyOn": "\${Token[TOKEN.34]}",
+              "attrSnapStartResponseOptimizationStatus": "\${Token[TOKEN.35]}",
               "cfnOptions": {},
               "cfnResourceType": "AWS::Lambda::Function",
               "code": {
                 "imageUri": undefined,
-                "s3Bucket": "\${Token[TOKEN.23]}",
+                "s3Bucket": "\${Token[TOKEN.27]}",
                 "s3Key": "bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d.zip",
                 "s3ObjectVersion": undefined,
                 "sourceKmsKeyArn": undefined,
@@ -536,15 +536,15 @@ RegularExamStack {
               "environment": "<unresolved-lazy>",
               "ephemeralStorage": undefined,
               "fileSystemConfigs": undefined,
-              "functionName": "\${Token[TOKEN.11]}",
+              "functionName": "\${Token[TOKEN.15]}",
               "handler": "index.handler",
               "imageConfig": undefined,
               "kmsKeyArn": undefined,
               "layers": [
-                "#{Token[TOKEN.27]}",
+                "#{Token[TOKEN.31]}",
               ],
               "loggingConfig": undefined,
-              "logicalId": "\${Token[ApplicationStack.imageUploadFunction.Resource.LogicalID.28]}",
+              "logicalId": "\${Token[ApplicationStack.imageUploadFunction.Resource.LogicalID.32]}",
               "memorySize": undefined,
               "node": Node {
                 "_children": {},
@@ -554,7 +554,7 @@ RegularExamStack {
                     "_allowCrossEnvironment": false,
                     "_didSplit": false,
                     "_physicalName": undefined,
-                    "_roleId": "\${Token[TOKEN.18]}",
+                    "_roleId": "\${Token[TOKEN.22]}",
                     "assumeRoleAction": "sts:AssumeRole",
                     "assumeRolePolicy": {
                       "Statement": [
@@ -562,7 +562,7 @@ RegularExamStack {
                           "Action": "sts:AssumeRole",
                           "Effect": "Allow",
                           "Principal": {
-                            "Service": "\${Token[lambda.amazonaws.com.13]}",
+                            "Service": "\${Token[lambda.amazonaws.com.17]}",
                           },
                         },
                       ],
@@ -573,14 +573,14 @@ RegularExamStack {
                     },
                     "dependables": Map {},
                     "env": {
-                      "account": "\${Token[AWS.AccountId.3]}",
-                      "region": "\${Token[AWS.Region.7]}",
+                      "account": "\${Token[AWS.AccountId.7]}",
+                      "region": "\${Token[AWS.Region.11]}",
                     },
                     "grantPrincipal": [Circular],
                     "inlinePolicies": {},
                     "managedPolicies": [
                       AwsManagedPolicy {
-                        "managedPolicyArn": "arn:\${Token[AWS.Partition.6]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+                        "managedPolicyArn": "arn:\${Token[AWS.Partition.10]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
                       },
                     ],
                     "node": Node {
@@ -594,8 +594,8 @@ RegularExamStack {
                           },
                           "defaultPolicyName": undefined,
                           "env": {
-                            "account": "\${Token[AWS.AccountId.3]}",
-                            "region": "\${Token[AWS.Region.7]}",
+                            "account": "\${Token[AWS.AccountId.7]}",
+                            "region": "\${Token[AWS.Region.11]}",
                           },
                           "grantPrincipal": [Circular],
                           "node": Node {
@@ -609,17 +609,17 @@ RegularExamStack {
                             "id": "ImportServiceRole",
                             "scope": [Circular],
                           },
-                          "physicalName": "\${Token[TOKEN.14]}",
+                          "physicalName": "\${Token[TOKEN.18]}",
                           "policyFragment": PrincipalPolicyFragment {
                             "conditions": {},
                             "principalJson": {
                               "AWS": [
-                                "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                                "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                               ],
                             },
                           },
-                          "principalAccount": "\${Token[AWS.AccountId.3]}",
-                          "roleArn": "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                          "principalAccount": "\${Token[AWS.AccountId.7]}",
+                          "roleArn": "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                           "roleName": "ServiceRole",
                           "stack": [Circular],
                           Symbol(@aws-cdk/core.DependableTrait): {
@@ -636,7 +636,7 @@ RegularExamStack {
                                   "Action": "sts:AssumeRole",
                                   "Effect": "Allow",
                                   "Principal": {
-                                    "Service": "\${Token[lambda.amazonaws.com.13]}",
+                                    "Service": "\${Token[lambda.amazonaws.com.17]}",
                                   },
                                 },
                               ],
@@ -644,13 +644,13 @@ RegularExamStack {
                             },
                             "description": undefined,
                             "managedPolicyArns": [
-                              "#{Token[TOKEN.15]}",
+                              "#{Token[TOKEN.19]}",
                             ],
                             "maxSessionDuration": undefined,
                             "path": undefined,
                             "permissionsBoundary": undefined,
                             "policies": undefined,
-                            "roleName": "\${Token[TOKEN.12]}",
+                            "roleName": "\${Token[TOKEN.16]}",
                           },
                           "assumeRolePolicyDocument": {
                             "Statement": [
@@ -658,21 +658,21 @@ RegularExamStack {
                                 "Action": "sts:AssumeRole",
                                 "Effect": "Allow",
                                 "Principal": {
-                                  "Service": "\${Token[lambda.amazonaws.com.13]}",
+                                  "Service": "\${Token[lambda.amazonaws.com.17]}",
                                 },
                               },
                             ],
                             "Version": "2012-10-17",
                           },
-                          "attrArn": "\${Token[TOKEN.17]}",
-                          "attrRoleId": "\${Token[TOKEN.18]}",
+                          "attrArn": "\${Token[TOKEN.21]}",
+                          "attrRoleId": "\${Token[TOKEN.22]}",
                           "cfnOptions": {},
                           "cfnResourceType": "AWS::IAM::Role",
                           "dependsOn": Set {},
                           "description": undefined,
-                          "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                          "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                           "managedPolicyArns": [
-                            "#{Token[TOKEN.15]}",
+                            "#{Token[TOKEN.19]}",
                           ],
                           "maxSessionDuration": undefined,
                           "node": Node {
@@ -682,7 +682,7 @@ RegularExamStack {
                             "_locked": false,
                             "_metadata": [
                               {
-                                "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                                "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                                 "trace": undefined,
                                 "type": "aws:cdk:logicalId",
                               },
@@ -696,7 +696,7 @@ RegularExamStack {
                           "permissionsBoundary": undefined,
                           "policies": undefined,
                           "rawOverrides": {},
-                          "roleName": "\${Token[TOKEN.12]}",
+                          "roleName": "\${Token[TOKEN.16]}",
                           "stack": [Circular],
                           "tags": TagManager {
                             "didHaveInitialTags": false,
@@ -730,18 +730,18 @@ RegularExamStack {
                       "scope": [Circular],
                     },
                     "permissionsBoundary": undefined,
-                    "physicalName": "\${Token[TOKEN.12]}",
+                    "physicalName": "\${Token[TOKEN.16]}",
                     "policyFragment": PrincipalPolicyFragment {
                       "conditions": {},
                       "principalJson": {
                         "AWS": [
-                          "\${Token[TOKEN.19]}",
+                          "\${Token[TOKEN.23]}",
                         ],
                       },
                     },
-                    "principalAccount": "\${Token[AWS.AccountId.3]}",
-                    "roleArn": "\${Token[TOKEN.19]}",
-                    "roleName": "\${Token[TOKEN.21]}",
+                    "principalAccount": "\${Token[AWS.AccountId.7]}",
+                    "roleArn": "\${Token[TOKEN.23]}",
+                    "roleName": "\${Token[TOKEN.25]}",
                     "stack": [Circular],
                     Symbol(@aws-cdk/core.DependableTrait): {
                       "dependencyRoots": [
@@ -753,7 +753,7 @@ RegularExamStack {
                 "_locked": false,
                 "_metadata": [
                   {
-                    "data": "\${Token[ApplicationStack.imageUploadFunction.Resource.LogicalID.28]}",
+                    "data": "\${Token[ApplicationStack.imageUploadFunction.Resource.LogicalID.32]}",
                     "trace": undefined,
                     "type": "aws:cdk:logicalId",
                   },
@@ -767,7 +767,7 @@ RegularExamStack {
               "rawOverrides": {},
               "recursiveLoop": undefined,
               "reservedConcurrentExecutions": undefined,
-              "role": "\${Token[TOKEN.19]}",
+              "role": "\${Token[TOKEN.23]}",
               "runtime": "nodejs20.x",
               "runtimeManagementConfig": undefined,
               "snapStart": undefined,
@@ -796,7 +796,7 @@ RegularExamStack {
               "_allowCrossEnvironment": false,
               "_didSplit": false,
               "_physicalName": undefined,
-              "_roleId": "\${Token[TOKEN.18]}",
+              "_roleId": "\${Token[TOKEN.22]}",
               "assumeRoleAction": "sts:AssumeRole",
               "assumeRolePolicy": {
                 "Statement": [
@@ -804,7 +804,7 @@ RegularExamStack {
                     "Action": "sts:AssumeRole",
                     "Effect": "Allow",
                     "Principal": {
-                      "Service": "\${Token[lambda.amazonaws.com.13]}",
+                      "Service": "\${Token[lambda.amazonaws.com.17]}",
                     },
                   },
                 ],
@@ -815,14 +815,14 @@ RegularExamStack {
               },
               "dependables": Map {},
               "env": {
-                "account": "\${Token[AWS.AccountId.3]}",
-                "region": "\${Token[AWS.Region.7]}",
+                "account": "\${Token[AWS.AccountId.7]}",
+                "region": "\${Token[AWS.Region.11]}",
               },
               "grantPrincipal": [Circular],
               "inlinePolicies": {},
               "managedPolicies": [
                 AwsManagedPolicy {
-                  "managedPolicyArn": "arn:\${Token[AWS.Partition.6]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+                  "managedPolicyArn": "arn:\${Token[AWS.Partition.10]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
                 },
               ],
               "node": Node {
@@ -836,8 +836,8 @@ RegularExamStack {
                     },
                     "defaultPolicyName": undefined,
                     "env": {
-                      "account": "\${Token[AWS.AccountId.3]}",
-                      "region": "\${Token[AWS.Region.7]}",
+                      "account": "\${Token[AWS.AccountId.7]}",
+                      "region": "\${Token[AWS.Region.11]}",
                     },
                     "grantPrincipal": [Circular],
                     "node": Node {
@@ -851,17 +851,17 @@ RegularExamStack {
                       "id": "ImportServiceRole",
                       "scope": [Circular],
                     },
-                    "physicalName": "\${Token[TOKEN.14]}",
+                    "physicalName": "\${Token[TOKEN.18]}",
                     "policyFragment": PrincipalPolicyFragment {
                       "conditions": {},
                       "principalJson": {
                         "AWS": [
-                          "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                          "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                         ],
                       },
                     },
-                    "principalAccount": "\${Token[AWS.AccountId.3]}",
-                    "roleArn": "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                    "principalAccount": "\${Token[AWS.AccountId.7]}",
+                    "roleArn": "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                     "roleName": "ServiceRole",
                     "stack": [Circular],
                     Symbol(@aws-cdk/core.DependableTrait): {
@@ -878,7 +878,7 @@ RegularExamStack {
                             "Action": "sts:AssumeRole",
                             "Effect": "Allow",
                             "Principal": {
-                              "Service": "\${Token[lambda.amazonaws.com.13]}",
+                              "Service": "\${Token[lambda.amazonaws.com.17]}",
                             },
                           },
                         ],
@@ -886,13 +886,13 @@ RegularExamStack {
                       },
                       "description": undefined,
                       "managedPolicyArns": [
-                        "#{Token[TOKEN.15]}",
+                        "#{Token[TOKEN.19]}",
                       ],
                       "maxSessionDuration": undefined,
                       "path": undefined,
                       "permissionsBoundary": undefined,
                       "policies": undefined,
-                      "roleName": "\${Token[TOKEN.12]}",
+                      "roleName": "\${Token[TOKEN.16]}",
                     },
                     "assumeRolePolicyDocument": {
                       "Statement": [
@@ -900,21 +900,21 @@ RegularExamStack {
                           "Action": "sts:AssumeRole",
                           "Effect": "Allow",
                           "Principal": {
-                            "Service": "\${Token[lambda.amazonaws.com.13]}",
+                            "Service": "\${Token[lambda.amazonaws.com.17]}",
                           },
                         },
                       ],
                       "Version": "2012-10-17",
                     },
-                    "attrArn": "\${Token[TOKEN.17]}",
-                    "attrRoleId": "\${Token[TOKEN.18]}",
+                    "attrArn": "\${Token[TOKEN.21]}",
+                    "attrRoleId": "\${Token[TOKEN.22]}",
                     "cfnOptions": {},
                     "cfnResourceType": "AWS::IAM::Role",
                     "dependsOn": Set {},
                     "description": undefined,
-                    "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                    "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                     "managedPolicyArns": [
-                      "#{Token[TOKEN.15]}",
+                      "#{Token[TOKEN.19]}",
                     ],
                     "maxSessionDuration": undefined,
                     "node": Node {
@@ -924,7 +924,7 @@ RegularExamStack {
                       "_locked": false,
                       "_metadata": [
                         {
-                          "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                          "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                           "trace": undefined,
                           "type": "aws:cdk:logicalId",
                         },
@@ -938,7 +938,7 @@ RegularExamStack {
                     "permissionsBoundary": undefined,
                     "policies": undefined,
                     "rawOverrides": {},
-                    "roleName": "\${Token[TOKEN.12]}",
+                    "roleName": "\${Token[TOKEN.16]}",
                     "stack": [Circular],
                     "tags": TagManager {
                       "didHaveInitialTags": false,
@@ -972,18 +972,18 @@ RegularExamStack {
                 "scope": [Circular],
               },
               "permissionsBoundary": undefined,
-              "physicalName": "\${Token[TOKEN.12]}",
+              "physicalName": "\${Token[TOKEN.16]}",
               "policyFragment": PrincipalPolicyFragment {
                 "conditions": {},
                 "principalJson": {
                   "AWS": [
-                    "\${Token[TOKEN.19]}",
+                    "\${Token[TOKEN.23]}",
                   ],
                 },
               },
-              "principalAccount": "\${Token[AWS.AccountId.3]}",
-              "roleArn": "\${Token[TOKEN.19]}",
-              "roleName": "\${Token[TOKEN.21]}",
+              "principalAccount": "\${Token[AWS.AccountId.7]}",
+              "roleArn": "\${Token[TOKEN.23]}",
+              "roleName": "\${Token[TOKEN.25]}",
               "stack": [Circular],
               Symbol(@aws-cdk/core.DependableTrait): {
                 "dependencyRoots": [
@@ -1010,19 +1010,19 @@ RegularExamStack {
                 "_allowCrossEnvironment": false,
                 "_physicalName": undefined,
                 "autoCreatePolicy": false,
-                "bucketArn": "arn:\${Token[AWS.Partition.6]}:s3:::\${Token[TOKEN.23]}",
-                "bucketDomainName": "\${Token[TOKEN.23]}.s3.\${Token[AWS.URLSuffix.4]}",
-                "bucketDualStackDomainName": "\${Token[TOKEN.23]}.s3.dualstack.\${Token[AWS.Region.7]}.\${Token[AWS.URLSuffix.4]}",
-                "bucketName": "\${Token[TOKEN.23]}",
-                "bucketRegionalDomainName": "\${Token[TOKEN.23]}.s3.\${Token[AWS.Region.7]}.\${Token[AWS.URLSuffix.4]}",
-                "bucketWebsiteDomainName": "\${Token[TOKEN.23]}.\${Token[TOKEN.25]}",
+                "bucketArn": "arn:\${Token[AWS.Partition.10]}:s3:::\${Token[TOKEN.27]}",
+                "bucketDomainName": "\${Token[TOKEN.27]}.s3.\${Token[AWS.URLSuffix.8]}",
+                "bucketDualStackDomainName": "\${Token[TOKEN.27]}.s3.dualstack.\${Token[AWS.Region.11]}.\${Token[AWS.URLSuffix.8]}",
+                "bucketName": "\${Token[TOKEN.27]}",
+                "bucketRegionalDomainName": "\${Token[TOKEN.27]}.s3.\${Token[AWS.Region.11]}.\${Token[AWS.URLSuffix.8]}",
+                "bucketWebsiteDomainName": "\${Token[TOKEN.27]}.\${Token[TOKEN.29]}",
                 "bucketWebsiteNewUrlFormat": false,
-                "bucketWebsiteUrl": "http://\${Token[TOKEN.23]}.\${Token[TOKEN.25]}",
+                "bucketWebsiteUrl": "http://\${Token[TOKEN.27]}.\${Token[TOKEN.29]}",
                 "disallowPublicAccess": false,
                 "encryptionKey": undefined,
                 "env": {
-                  "account": "\${Token[AWS.AccountId.3]}",
-                  "region": "\${Token[AWS.Region.7]}",
+                  "account": "\${Token[AWS.AccountId.7]}",
+                  "region": "\${Token[AWS.Region.11]}",
                 },
                 "isWebsite": false,
                 "node": Node {
@@ -1041,7 +1041,7 @@ RegularExamStack {
                   "scope": [Circular],
                 },
                 "notificationsHandlerRole": undefined,
-                "physicalName": "\${Token[TOKEN.26]}",
+                "physicalName": "\${Token[TOKEN.30]}",
                 "policy": undefined,
                 "stack": [Circular],
                 Symbol(@aws-cdk/core.DependableTrait): {
@@ -1050,7 +1050,7 @@ RegularExamStack {
                   ],
                 },
               },
-              "httpUrl": "\${Token[TOKEN.22]}",
+              "httpUrl": "\${Token[TOKEN.26]}",
               "isBundled": true,
               "isFile": false,
               "isZipArchive": true,
@@ -1060,19 +1060,19 @@ RegularExamStack {
                     "_allowCrossEnvironment": false,
                     "_physicalName": undefined,
                     "autoCreatePolicy": false,
-                    "bucketArn": "arn:\${Token[AWS.Partition.6]}:s3:::\${Token[TOKEN.23]}",
-                    "bucketDomainName": "\${Token[TOKEN.23]}.s3.\${Token[AWS.URLSuffix.4]}",
-                    "bucketDualStackDomainName": "\${Token[TOKEN.23]}.s3.dualstack.\${Token[AWS.Region.7]}.\${Token[AWS.URLSuffix.4]}",
-                    "bucketName": "\${Token[TOKEN.23]}",
-                    "bucketRegionalDomainName": "\${Token[TOKEN.23]}.s3.\${Token[AWS.Region.7]}.\${Token[AWS.URLSuffix.4]}",
-                    "bucketWebsiteDomainName": "\${Token[TOKEN.23]}.\${Token[TOKEN.25]}",
+                    "bucketArn": "arn:\${Token[AWS.Partition.10]}:s3:::\${Token[TOKEN.27]}",
+                    "bucketDomainName": "\${Token[TOKEN.27]}.s3.\${Token[AWS.URLSuffix.8]}",
+                    "bucketDualStackDomainName": "\${Token[TOKEN.27]}.s3.dualstack.\${Token[AWS.Region.11]}.\${Token[AWS.URLSuffix.8]}",
+                    "bucketName": "\${Token[TOKEN.27]}",
+                    "bucketRegionalDomainName": "\${Token[TOKEN.27]}.s3.\${Token[AWS.Region.11]}.\${Token[AWS.URLSuffix.8]}",
+                    "bucketWebsiteDomainName": "\${Token[TOKEN.27]}.\${Token[TOKEN.29]}",
                     "bucketWebsiteNewUrlFormat": false,
-                    "bucketWebsiteUrl": "http://\${Token[TOKEN.23]}.\${Token[TOKEN.25]}",
+                    "bucketWebsiteUrl": "http://\${Token[TOKEN.27]}.\${Token[TOKEN.29]}",
                     "disallowPublicAccess": false,
                     "encryptionKey": undefined,
                     "env": {
-                      "account": "\${Token[AWS.AccountId.3]}",
-                      "region": "\${Token[AWS.Region.7]}",
+                      "account": "\${Token[AWS.AccountId.7]}",
+                      "region": "\${Token[AWS.Region.11]}",
                     },
                     "isWebsite": false,
                     "node": Node {
@@ -1091,7 +1091,7 @@ RegularExamStack {
                       "scope": [Circular],
                     },
                     "notificationsHandlerRole": undefined,
-                    "physicalName": "\${Token[TOKEN.26]}",
+                    "physicalName": "\${Token[TOKEN.30]}",
                     "policy": undefined,
                     "stack": [Circular],
                     Symbol(@aws-cdk/core.DependableTrait): {
@@ -1101,10 +1101,10 @@ RegularExamStack {
                     },
                   },
                   "Stage": AssetStaging {
-                    "absoluteStagedPath": "/tmp/cdk.out2eHUm5/asset.bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
+                    "absoluteStagedPath": "/tmp/cdk.outdmAD4U/asset.bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
                     "assetHash": "bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
-                    "assetOutdir": "/tmp/cdk.out2eHUm5",
-                    "cacheKey": "e3621aacc9290d3aca954846348f7a05161c3e2b2d3a61db070185f1ece88f20",
+                    "assetOutdir": "/tmp/cdk.outdmAD4U",
+                    "cacheKey": "d2ba75308608f5a80c4ce2d53d5a0551ba30e157e20641a8f665319255f3e856",
                     "customSourceFingerprint": undefined,
                     "fingerprintOptions": {
                       "assetHash": undefined,
@@ -1210,7 +1210,7 @@ RegularExamStack {
                       "size": 4096,
                       "uid": 1000,
                     },
-                    "stagedPath": "/tmp/cdk.out2eHUm5/asset.bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
+                    "stagedPath": "/tmp/cdk.outdmAD4U/asset.bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
                     Symbol(@aws-cdk/core.DependableTrait): {
                       "dependencyRoots": [
                         [Circular],
@@ -1227,10 +1227,10 @@ RegularExamStack {
                 "id": "Code",
                 "scope": [Circular],
               },
-              "s3BucketName": "\${Token[TOKEN.23]}",
+              "s3BucketName": "\${Token[TOKEN.27]}",
               "s3ObjectKey": "bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d.zip",
-              "s3ObjectUrl": "\${Token[TOKEN.24]}",
-              "s3Url": "\${Token[TOKEN.22]}",
+              "s3ObjectUrl": "\${Token[TOKEN.28]}",
+              "s3Url": "\${Token[TOKEN.26]}",
               "sourceHash": "bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d",
               Symbol(@aws-cdk/core.DependableTrait): {
                 "dependencyRoots": [
@@ -1243,7 +1243,7 @@ RegularExamStack {
                 "architectures": undefined,
                 "code": {
                   "imageUri": undefined,
-                  "s3Bucket": "\${Token[TOKEN.23]}",
+                  "s3Bucket": "\${Token[TOKEN.27]}",
                   "s3Key": "bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d.zip",
                   "s3ObjectVersion": undefined,
                   "sourceKmsKeyArn": undefined,
@@ -1255,19 +1255,19 @@ RegularExamStack {
                 "environment": "<unresolved-lazy>",
                 "ephemeralStorage": undefined,
                 "fileSystemConfigs": undefined,
-                "functionName": "\${Token[TOKEN.11]}",
+                "functionName": "\${Token[TOKEN.15]}",
                 "handler": "index.handler",
                 "imageConfig": undefined,
                 "kmsKeyArn": undefined,
                 "layers": [
-                  "#{Token[TOKEN.27]}",
+                  "#{Token[TOKEN.31]}",
                 ],
                 "loggingConfig": undefined,
                 "memorySize": undefined,
                 "packageType": undefined,
                 "recursiveLoop": undefined,
                 "reservedConcurrentExecutions": undefined,
-                "role": "\${Token[TOKEN.19]}",
+                "role": "\${Token[TOKEN.23]}",
                 "runtime": "nodejs20.x",
                 "runtimeManagementConfig": undefined,
                 "snapStart": undefined,
@@ -1275,15 +1275,15 @@ RegularExamStack {
                 "vpcConfig": undefined,
               },
               "architectures": undefined,
-              "attrArn": "\${Token[TOKEN.29]}",
+              "attrArn": "\${Token[TOKEN.33]}",
               "attrSnapStartResponse": "<unresolved-token>",
-              "attrSnapStartResponseApplyOn": "\${Token[TOKEN.30]}",
-              "attrSnapStartResponseOptimizationStatus": "\${Token[TOKEN.31]}",
+              "attrSnapStartResponseApplyOn": "\${Token[TOKEN.34]}",
+              "attrSnapStartResponseOptimizationStatus": "\${Token[TOKEN.35]}",
               "cfnOptions": {},
               "cfnResourceType": "AWS::Lambda::Function",
               "code": {
                 "imageUri": undefined,
-                "s3Bucket": "\${Token[TOKEN.23]}",
+                "s3Bucket": "\${Token[TOKEN.27]}",
                 "s3Key": "bb27966114312982518bf3ebe67c0b984b7357ad1663af40e8838b9fd498584d.zip",
                 "s3ObjectVersion": undefined,
                 "sourceKmsKeyArn": undefined,
@@ -1296,15 +1296,15 @@ RegularExamStack {
               "environment": "<unresolved-lazy>",
               "ephemeralStorage": undefined,
               "fileSystemConfigs": undefined,
-              "functionName": "\${Token[TOKEN.11]}",
+              "functionName": "\${Token[TOKEN.15]}",
               "handler": "index.handler",
               "imageConfig": undefined,
               "kmsKeyArn": undefined,
               "layers": [
-                "#{Token[TOKEN.27]}",
+                "#{Token[TOKEN.31]}",
               ],
               "loggingConfig": undefined,
-              "logicalId": "\${Token[ApplicationStack.imageUploadFunction.Resource.LogicalID.28]}",
+              "logicalId": "\${Token[ApplicationStack.imageUploadFunction.Resource.LogicalID.32]}",
               "memorySize": undefined,
               "node": Node {
                 "_children": {},
@@ -1314,7 +1314,7 @@ RegularExamStack {
                     "_allowCrossEnvironment": false,
                     "_didSplit": false,
                     "_physicalName": undefined,
-                    "_roleId": "\${Token[TOKEN.18]}",
+                    "_roleId": "\${Token[TOKEN.22]}",
                     "assumeRoleAction": "sts:AssumeRole",
                     "assumeRolePolicy": {
                       "Statement": [
@@ -1322,7 +1322,7 @@ RegularExamStack {
                           "Action": "sts:AssumeRole",
                           "Effect": "Allow",
                           "Principal": {
-                            "Service": "\${Token[lambda.amazonaws.com.13]}",
+                            "Service": "\${Token[lambda.amazonaws.com.17]}",
                           },
                         },
                       ],
@@ -1333,14 +1333,14 @@ RegularExamStack {
                     },
                     "dependables": Map {},
                     "env": {
-                      "account": "\${Token[AWS.AccountId.3]}",
-                      "region": "\${Token[AWS.Region.7]}",
+                      "account": "\${Token[AWS.AccountId.7]}",
+                      "region": "\${Token[AWS.Region.11]}",
                     },
                     "grantPrincipal": [Circular],
                     "inlinePolicies": {},
                     "managedPolicies": [
                       AwsManagedPolicy {
-                        "managedPolicyArn": "arn:\${Token[AWS.Partition.6]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+                        "managedPolicyArn": "arn:\${Token[AWS.Partition.10]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
                       },
                     ],
                     "node": Node {
@@ -1354,8 +1354,8 @@ RegularExamStack {
                           },
                           "defaultPolicyName": undefined,
                           "env": {
-                            "account": "\${Token[AWS.AccountId.3]}",
-                            "region": "\${Token[AWS.Region.7]}",
+                            "account": "\${Token[AWS.AccountId.7]}",
+                            "region": "\${Token[AWS.Region.11]}",
                           },
                           "grantPrincipal": [Circular],
                           "node": Node {
@@ -1369,17 +1369,17 @@ RegularExamStack {
                             "id": "ImportServiceRole",
                             "scope": [Circular],
                           },
-                          "physicalName": "\${Token[TOKEN.14]}",
+                          "physicalName": "\${Token[TOKEN.18]}",
                           "policyFragment": PrincipalPolicyFragment {
                             "conditions": {},
                             "principalJson": {
                               "AWS": [
-                                "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                                "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                               ],
                             },
                           },
-                          "principalAccount": "\${Token[AWS.AccountId.3]}",
-                          "roleArn": "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                          "principalAccount": "\${Token[AWS.AccountId.7]}",
+                          "roleArn": "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                           "roleName": "ServiceRole",
                           "stack": [Circular],
                           Symbol(@aws-cdk/core.DependableTrait): {
@@ -1396,7 +1396,7 @@ RegularExamStack {
                                   "Action": "sts:AssumeRole",
                                   "Effect": "Allow",
                                   "Principal": {
-                                    "Service": "\${Token[lambda.amazonaws.com.13]}",
+                                    "Service": "\${Token[lambda.amazonaws.com.17]}",
                                   },
                                 },
                               ],
@@ -1404,13 +1404,13 @@ RegularExamStack {
                             },
                             "description": undefined,
                             "managedPolicyArns": [
-                              "#{Token[TOKEN.15]}",
+                              "#{Token[TOKEN.19]}",
                             ],
                             "maxSessionDuration": undefined,
                             "path": undefined,
                             "permissionsBoundary": undefined,
                             "policies": undefined,
-                            "roleName": "\${Token[TOKEN.12]}",
+                            "roleName": "\${Token[TOKEN.16]}",
                           },
                           "assumeRolePolicyDocument": {
                             "Statement": [
@@ -1418,21 +1418,21 @@ RegularExamStack {
                                 "Action": "sts:AssumeRole",
                                 "Effect": "Allow",
                                 "Principal": {
-                                  "Service": "\${Token[lambda.amazonaws.com.13]}",
+                                  "Service": "\${Token[lambda.amazonaws.com.17]}",
                                 },
                               },
                             ],
                             "Version": "2012-10-17",
                           },
-                          "attrArn": "\${Token[TOKEN.17]}",
-                          "attrRoleId": "\${Token[TOKEN.18]}",
+                          "attrArn": "\${Token[TOKEN.21]}",
+                          "attrRoleId": "\${Token[TOKEN.22]}",
                           "cfnOptions": {},
                           "cfnResourceType": "AWS::IAM::Role",
                           "dependsOn": Set {},
                           "description": undefined,
-                          "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                          "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                           "managedPolicyArns": [
-                            "#{Token[TOKEN.15]}",
+                            "#{Token[TOKEN.19]}",
                           ],
                           "maxSessionDuration": undefined,
                           "node": Node {
@@ -1442,7 +1442,7 @@ RegularExamStack {
                             "_locked": false,
                             "_metadata": [
                               {
-                                "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                                "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                                 "trace": undefined,
                                 "type": "aws:cdk:logicalId",
                               },
@@ -1456,7 +1456,7 @@ RegularExamStack {
                           "permissionsBoundary": undefined,
                           "policies": undefined,
                           "rawOverrides": {},
-                          "roleName": "\${Token[TOKEN.12]}",
+                          "roleName": "\${Token[TOKEN.16]}",
                           "stack": [Circular],
                           "tags": TagManager {
                             "didHaveInitialTags": false,
@@ -1490,18 +1490,18 @@ RegularExamStack {
                       "scope": [Circular],
                     },
                     "permissionsBoundary": undefined,
-                    "physicalName": "\${Token[TOKEN.12]}",
+                    "physicalName": "\${Token[TOKEN.16]}",
                     "policyFragment": PrincipalPolicyFragment {
                       "conditions": {},
                       "principalJson": {
                         "AWS": [
-                          "\${Token[TOKEN.19]}",
+                          "\${Token[TOKEN.23]}",
                         ],
                       },
                     },
-                    "principalAccount": "\${Token[AWS.AccountId.3]}",
-                    "roleArn": "\${Token[TOKEN.19]}",
-                    "roleName": "\${Token[TOKEN.21]}",
+                    "principalAccount": "\${Token[AWS.AccountId.7]}",
+                    "roleArn": "\${Token[TOKEN.23]}",
+                    "roleName": "\${Token[TOKEN.25]}",
                     "stack": [Circular],
                     Symbol(@aws-cdk/core.DependableTrait): {
                       "dependencyRoots": [
@@ -1513,7 +1513,7 @@ RegularExamStack {
                 "_locked": false,
                 "_metadata": [
                   {
-                    "data": "\${Token[ApplicationStack.imageUploadFunction.Resource.LogicalID.28]}",
+                    "data": "\${Token[ApplicationStack.imageUploadFunction.Resource.LogicalID.32]}",
                     "trace": undefined,
                     "type": "aws:cdk:logicalId",
                   },
@@ -1527,7 +1527,7 @@ RegularExamStack {
               "rawOverrides": {},
               "recursiveLoop": undefined,
               "reservedConcurrentExecutions": undefined,
-              "role": "\${Token[TOKEN.19]}",
+              "role": "\${Token[TOKEN.23]}",
               "runtime": "nodejs20.x",
               "runtimeManagementConfig": undefined,
               "snapStart": undefined,
@@ -1556,7 +1556,7 @@ RegularExamStack {
               "_allowCrossEnvironment": false,
               "_didSplit": false,
               "_physicalName": undefined,
-              "_roleId": "\${Token[TOKEN.18]}",
+              "_roleId": "\${Token[TOKEN.22]}",
               "assumeRoleAction": "sts:AssumeRole",
               "assumeRolePolicy": {
                 "Statement": [
@@ -1564,7 +1564,7 @@ RegularExamStack {
                     "Action": "sts:AssumeRole",
                     "Effect": "Allow",
                     "Principal": {
-                      "Service": "\${Token[lambda.amazonaws.com.13]}",
+                      "Service": "\${Token[lambda.amazonaws.com.17]}",
                     },
                   },
                 ],
@@ -1575,14 +1575,14 @@ RegularExamStack {
               },
               "dependables": Map {},
               "env": {
-                "account": "\${Token[AWS.AccountId.3]}",
-                "region": "\${Token[AWS.Region.7]}",
+                "account": "\${Token[AWS.AccountId.7]}",
+                "region": "\${Token[AWS.Region.11]}",
               },
               "grantPrincipal": [Circular],
               "inlinePolicies": {},
               "managedPolicies": [
                 AwsManagedPolicy {
-                  "managedPolicyArn": "arn:\${Token[AWS.Partition.6]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+                  "managedPolicyArn": "arn:\${Token[AWS.Partition.10]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
                 },
               ],
               "node": Node {
@@ -1596,8 +1596,8 @@ RegularExamStack {
                     },
                     "defaultPolicyName": undefined,
                     "env": {
-                      "account": "\${Token[AWS.AccountId.3]}",
-                      "region": "\${Token[AWS.Region.7]}",
+                      "account": "\${Token[AWS.AccountId.7]}",
+                      "region": "\${Token[AWS.Region.11]}",
                     },
                     "grantPrincipal": [Circular],
                     "node": Node {
@@ -1611,17 +1611,17 @@ RegularExamStack {
                       "id": "ImportServiceRole",
                       "scope": [Circular],
                     },
-                    "physicalName": "\${Token[TOKEN.14]}",
+                    "physicalName": "\${Token[TOKEN.18]}",
                     "policyFragment": PrincipalPolicyFragment {
                       "conditions": {},
                       "principalJson": {
                         "AWS": [
-                          "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                          "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                         ],
                       },
                     },
-                    "principalAccount": "\${Token[AWS.AccountId.3]}",
-                    "roleArn": "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                    "principalAccount": "\${Token[AWS.AccountId.7]}",
+                    "roleArn": "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                     "roleName": "ServiceRole",
                     "stack": [Circular],
                     Symbol(@aws-cdk/core.DependableTrait): {
@@ -1638,7 +1638,7 @@ RegularExamStack {
                             "Action": "sts:AssumeRole",
                             "Effect": "Allow",
                             "Principal": {
-                              "Service": "\${Token[lambda.amazonaws.com.13]}",
+                              "Service": "\${Token[lambda.amazonaws.com.17]}",
                             },
                           },
                         ],
@@ -1646,13 +1646,13 @@ RegularExamStack {
                       },
                       "description": undefined,
                       "managedPolicyArns": [
-                        "#{Token[TOKEN.15]}",
+                        "#{Token[TOKEN.19]}",
                       ],
                       "maxSessionDuration": undefined,
                       "path": undefined,
                       "permissionsBoundary": undefined,
                       "policies": undefined,
-                      "roleName": "\${Token[TOKEN.12]}",
+                      "roleName": "\${Token[TOKEN.16]}",
                     },
                     "assumeRolePolicyDocument": {
                       "Statement": [
@@ -1660,21 +1660,21 @@ RegularExamStack {
                           "Action": "sts:AssumeRole",
                           "Effect": "Allow",
                           "Principal": {
-                            "Service": "\${Token[lambda.amazonaws.com.13]}",
+                            "Service": "\${Token[lambda.amazonaws.com.17]}",
                           },
                         },
                       ],
                       "Version": "2012-10-17",
                     },
-                    "attrArn": "\${Token[TOKEN.17]}",
-                    "attrRoleId": "\${Token[TOKEN.18]}",
+                    "attrArn": "\${Token[TOKEN.21]}",
+                    "attrRoleId": "\${Token[TOKEN.22]}",
                     "cfnOptions": {},
                     "cfnResourceType": "AWS::IAM::Role",
                     "dependsOn": Set {},
                     "description": undefined,
-                    "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                    "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                     "managedPolicyArns": [
-                      "#{Token[TOKEN.15]}",
+                      "#{Token[TOKEN.19]}",
                     ],
                     "maxSessionDuration": undefined,
                     "node": Node {
@@ -1684,7 +1684,7 @@ RegularExamStack {
                       "_locked": false,
                       "_metadata": [
                         {
-                          "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                          "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                           "trace": undefined,
                           "type": "aws:cdk:logicalId",
                         },
@@ -1698,7 +1698,7 @@ RegularExamStack {
                     "permissionsBoundary": undefined,
                     "policies": undefined,
                     "rawOverrides": {},
-                    "roleName": "\${Token[TOKEN.12]}",
+                    "roleName": "\${Token[TOKEN.16]}",
                     "stack": [Circular],
                     "tags": TagManager {
                       "didHaveInitialTags": false,
@@ -1732,18 +1732,18 @@ RegularExamStack {
                 "scope": [Circular],
               },
               "permissionsBoundary": undefined,
-              "physicalName": "\${Token[TOKEN.12]}",
+              "physicalName": "\${Token[TOKEN.16]}",
               "policyFragment": PrincipalPolicyFragment {
                 "conditions": {},
                 "principalJson": {
                   "AWS": [
-                    "\${Token[TOKEN.19]}",
+                    "\${Token[TOKEN.23]}",
                   ],
                 },
               },
-              "principalAccount": "\${Token[AWS.AccountId.3]}",
-              "roleArn": "\${Token[TOKEN.19]}",
-              "roleName": "\${Token[TOKEN.21]}",
+              "principalAccount": "\${Token[AWS.AccountId.7]}",
+              "roleArn": "\${Token[TOKEN.23]}",
+              "roleName": "\${Token[TOKEN.25]}",
               "stack": [Circular],
               Symbol(@aws-cdk/core.DependableTrait): {
                 "dependencyRoots": [
@@ -1761,12 +1761,12 @@ RegularExamStack {
           "id": "imageUploadFunction",
           "scope": [Circular],
         },
-        "physicalName": "\${Token[TOKEN.11]}",
+        "physicalName": "\${Token[TOKEN.15]}",
         "role": Role {
           "_allowCrossEnvironment": false,
           "_didSplit": false,
           "_physicalName": undefined,
-          "_roleId": "\${Token[TOKEN.18]}",
+          "_roleId": "\${Token[TOKEN.22]}",
           "assumeRoleAction": "sts:AssumeRole",
           "assumeRolePolicy": {
             "Statement": [
@@ -1774,7 +1774,7 @@ RegularExamStack {
                 "Action": "sts:AssumeRole",
                 "Effect": "Allow",
                 "Principal": {
-                  "Service": "\${Token[lambda.amazonaws.com.13]}",
+                  "Service": "\${Token[lambda.amazonaws.com.17]}",
                 },
               },
             ],
@@ -1785,14 +1785,14 @@ RegularExamStack {
           },
           "dependables": Map {},
           "env": {
-            "account": "\${Token[AWS.AccountId.3]}",
-            "region": "\${Token[AWS.Region.7]}",
+            "account": "\${Token[AWS.AccountId.7]}",
+            "region": "\${Token[AWS.Region.11]}",
           },
           "grantPrincipal": [Circular],
           "inlinePolicies": {},
           "managedPolicies": [
             AwsManagedPolicy {
-              "managedPolicyArn": "arn:\${Token[AWS.Partition.6]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              "managedPolicyArn": "arn:\${Token[AWS.Partition.10]}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
             },
           ],
           "node": Node {
@@ -1806,8 +1806,8 @@ RegularExamStack {
                 },
                 "defaultPolicyName": undefined,
                 "env": {
-                  "account": "\${Token[AWS.AccountId.3]}",
-                  "region": "\${Token[AWS.Region.7]}",
+                  "account": "\${Token[AWS.AccountId.7]}",
+                  "region": "\${Token[AWS.Region.11]}",
                 },
                 "grantPrincipal": [Circular],
                 "node": Node {
@@ -1821,17 +1821,17 @@ RegularExamStack {
                   "id": "ImportServiceRole",
                   "scope": [Circular],
                 },
-                "physicalName": "\${Token[TOKEN.14]}",
+                "physicalName": "\${Token[TOKEN.18]}",
                 "policyFragment": PrincipalPolicyFragment {
                   "conditions": {},
                   "principalJson": {
                     "AWS": [
-                      "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                      "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                     ],
                   },
                 },
-                "principalAccount": "\${Token[AWS.AccountId.3]}",
-                "roleArn": "arn:\${Token[AWS.Partition.6]}:iam::\${Token[AWS.AccountId.3]}:role",
+                "principalAccount": "\${Token[AWS.AccountId.7]}",
+                "roleArn": "arn:\${Token[AWS.Partition.10]}:iam::\${Token[AWS.AccountId.7]}:role",
                 "roleName": "ServiceRole",
                 "stack": [Circular],
                 Symbol(@aws-cdk/core.DependableTrait): {
@@ -1848,7 +1848,7 @@ RegularExamStack {
                         "Action": "sts:AssumeRole",
                         "Effect": "Allow",
                         "Principal": {
-                          "Service": "\${Token[lambda.amazonaws.com.13]}",
+                          "Service": "\${Token[lambda.amazonaws.com.17]}",
                         },
                       },
                     ],
@@ -1856,13 +1856,13 @@ RegularExamStack {
                   },
                   "description": undefined,
                   "managedPolicyArns": [
-                    "#{Token[TOKEN.15]}",
+                    "#{Token[TOKEN.19]}",
                   ],
                   "maxSessionDuration": undefined,
                   "path": undefined,
                   "permissionsBoundary": undefined,
                   "policies": undefined,
-                  "roleName": "\${Token[TOKEN.12]}",
+                  "roleName": "\${Token[TOKEN.16]}",
                 },
                 "assumeRolePolicyDocument": {
                   "Statement": [
@@ -1870,21 +1870,21 @@ RegularExamStack {
                       "Action": "sts:AssumeRole",
                       "Effect": "Allow",
                       "Principal": {
-                        "Service": "\${Token[lambda.amazonaws.com.13]}",
+                        "Service": "\${Token[lambda.amazonaws.com.17]}",
                       },
                     },
                   ],
                   "Version": "2012-10-17",
                 },
-                "attrArn": "\${Token[TOKEN.17]}",
-                "attrRoleId": "\${Token[TOKEN.18]}",
+                "attrArn": "\${Token[TOKEN.21]}",
+                "attrRoleId": "\${Token[TOKEN.22]}",
                 "cfnOptions": {},
                 "cfnResourceType": "AWS::IAM::Role",
                 "dependsOn": Set {},
                 "description": undefined,
-                "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                "logicalId": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                 "managedPolicyArns": [
-                  "#{Token[TOKEN.15]}",
+                  "#{Token[TOKEN.19]}",
                 ],
                 "maxSessionDuration": undefined,
                 "node": Node {
@@ -1894,7 +1894,7 @@ RegularExamStack {
                   "_locked": false,
                   "_metadata": [
                     {
-                      "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.16]}",
+                      "data": "\${Token[ApplicationStack.imageUploadFunction.ServiceRole.Resource.LogicalID.20]}",
                       "trace": undefined,
                       "type": "aws:cdk:logicalId",
                     },
@@ -1908,7 +1908,7 @@ RegularExamStack {
                 "permissionsBoundary": undefined,
                 "policies": undefined,
                 "rawOverrides": {},
-                "roleName": "\${Token[TOKEN.12]}",
+                "roleName": "\${Token[TOKEN.16]}",
                 "stack": [Circular],
                 "tags": TagManager {
                   "didHaveInitialTags": false,
@@ -1942,18 +1942,18 @@ RegularExamStack {
             "scope": [Circular],
           },
           "permissionsBoundary": undefined,
-          "physicalName": "\${Token[TOKEN.12]}",
+          "physicalName": "\${Token[TOKEN.16]}",
           "policyFragment": PrincipalPolicyFragment {
             "conditions": {},
             "principalJson": {
               "AWS": [
-                "\${Token[TOKEN.19]}",
+                "\${Token[TOKEN.23]}",
               ],
             },
           },
-          "principalAccount": "\${Token[AWS.AccountId.3]}",
-          "roleArn": "\${Token[TOKEN.19]}",
-          "roleName": "\${Token[TOKEN.21]}",
+          "principalAccount": "\${Token[AWS.AccountId.7]}",
+          "roleArn": "\${Token[TOKEN.23]}",
+          "roleName": "\${Token[TOKEN.25]}",
           "stack": [Circular],
           Symbol(@aws-cdk/core.DependableTrait): {
             "dependencyRoots": [
@@ -1990,9 +1990,9 @@ RegularExamStack {
     "scope": App {
       "_assemblyBuilder": CloudAssemblyBuilder {
         "artifacts": {},
-        "assetOutdir": "/tmp/cdk.out2eHUm5",
+        "assetOutdir": "/tmp/cdk.outdmAD4U",
         "missing": [],
-        "outdir": "/tmp/cdk.out2eHUm5",
+        "outdir": "/tmp/cdk.outdmAD4U",
         "parentBuilder": undefined,
       },
       "_treeMetadata": true,
@@ -2022,7 +2022,7 @@ RegularExamStack {
       },
     },
   },
-  "region": "\${Token[AWS.Region.7]}",
+  "region": "\${Token[AWS.Region.11]}",
   "synthesizer": DefaultStackSynthesizer {
     "_boundStack": [Circular],
     "_cloudFormationExecutionRoleArn": "arn:\${AWS::Partition}:iam::\${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-\${AWS::AccountId}-\${AWS::Region}",
