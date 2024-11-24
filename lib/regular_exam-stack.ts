@@ -1,12 +1,13 @@
 import * as cdk from 'aws-cdk-lib';
 import { EndpointType, LambdaIntegration, RestApi } from 'aws-cdk-lib/aws-apigateway';
-import { Runtime } from 'aws-cdk-lib/aws-lambda';
+import { FilterCriteria, FilterRule, Runtime, StartingPosition } from 'aws-cdk-lib/aws-lambda';
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import {CorsOptions,Cors } from 'aws-cdk-lib/aws-apigateway';
 import { Lambda, S3 } from 'aws-cdk-lib/aws-ses-actions';
 import { Construct } from 'constructs';
 import { Topic } from 'aws-cdk-lib/aws-sns';
 import { AttributeType, BillingMode, StreamViewType, Table } from 'aws-cdk-lib/aws-dynamodb';
+import { DynamoEventSource } from 'aws-cdk-lib/aws-lambda-event-sources';
  
 
 export class RegularExamStack extends cdk.Stack {
@@ -53,7 +54,6 @@ export class RegularExamStack extends cdk.Stack {
  
     
     
-    const storage = new S3({bucket:'imagesBucket'});
     const metadataTable = new Table(this, 'ImagesMetadataTable', {
       partitionKey: {
         name: "id",
@@ -68,5 +68,16 @@ export class RegularExamStack extends cdk.Stack {
       partitionKey: {name: "extensionAttr", type: AttributeType.STRING}
 
     })
+
+
+    sendNotificationFunction.addEventSource(new DynamoEventSource(metadataTable, {
+      startingPosition: StartingPosition.LATEST,
+      batchSize: 5,
+      filters: [
+        FilterCriteria.filter({
+          eventName: FilterRule.isEqual('INSERT')
+        })
+      ]
+    }))
   }
 }
