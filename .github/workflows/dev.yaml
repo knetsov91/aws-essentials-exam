@@ -71,5 +71,5 @@ jobs:
 
             - name: Deploy CDK Stack
               run: |
-                npx cdk deploy Koko
+                npx cdk deploy
                 echo "Deploy success"
